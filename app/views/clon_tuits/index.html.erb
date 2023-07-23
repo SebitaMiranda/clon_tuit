@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clon tuits</h1>
+
+<div id="clon_tuits">
+  <% @clon_tuits.each do |clon_tuit| %>
+    <%= render clon_tuit %>
+    <p>
+      <%= link_to "Show this clon tuit", clon_tuit %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New clon tuit", new_clon_tuit_path %>

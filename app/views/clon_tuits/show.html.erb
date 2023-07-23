@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @clon_tuit %>
+
+<div>
+  <%= link_to "Edit this clon tuit", edit_clon_tuit_path(@clon_tuit) %> |
+  <%= link_to "Back to clon tuits", clon_tuits_path %>
+
+  <%= button_to "Destroy this clon tuit", @clon_tuit, method: :delete %>
+</div>
