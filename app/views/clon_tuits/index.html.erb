@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Clon tuits</h1>
+<br><br><br>
+<%= form_with url: clon_tuits_path, method: :get do |form| %>
+  <%= form.text_field :query_text, placeholder: ('Busqueda'), value: params[:query_text] %>
+  <% end %>
 
 <div id="clon_tuits">
   <% @clon_tuits.each do |clon_tuit| %>
@@ -10,5 +14,8 @@
     </p>
   <% end %>
 </div>
+<br><br>
+<%= raw pagy_nav(@pagy) %>
+<br><br>
 
 <%= link_to "New clon tuit", new_clon_tuit_path %>

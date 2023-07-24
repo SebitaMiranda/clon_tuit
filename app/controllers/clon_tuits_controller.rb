@@ -3,11 +3,21 @@ class ClonTuitsController < ApplicationController
 
   # GET /clon_tuits or /clon_tuits.json
   def index
-    @clon_tuits = ClonTuit.all
+    @pagy, @clon_tuits = pagy(ClonTuit.all)
+
+    if params[:query_text].present?
+      @clon_tuits = @clon_tuits.whose_name_starts_with(params[:query_text])
+    end
   end
 
   # GET /clon_tuits/1 or /clon_tuits/1.json
   def show
+  end
+
+  def preview
+  end
+
+  def search
   end
 
   # GET /clon_tuits/new
