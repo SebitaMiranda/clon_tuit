@@ -1,12 +1,12 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Clon tuits</h1>
-<br><br><br>
-<%= form_with url: clon_tuits_path, method: :get do |form| %>
+
+<h1 class="text-center">Clon tuits</h1>
+<br><br>
+<%= form_with url: clon_tuits_path, class: 'text-center', method: :get do |form|  %>
   <%= form.text_field :query_text, placeholder: ('Busqueda'), value: params[:query_text] %>
   <% end %>
 
-<div id="clon_tuits">
+<div id="clon_tuits" class="text-center">
   <% @clon_tuits.each do |clon_tuit| %>
     <%= render clon_tuit %>
     <p>

@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: #00acee;
+    color: white;
+
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 200px;
+}
